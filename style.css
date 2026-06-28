@@ -1,0 +1,242 @@
+here/* រចនាបថបែប Cyber War លាយឡំប្រពៃណី */
+:root {
+    --cyber-gold: #c5a059;
+    --cyber-dark: #11161b;
+    --cyber-blue: #00e5ff;
+    --cyber-red: #ff1744;
+    --card-bg: #1a232c;
+    --text-light: #e0e6ed;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cyber-dark);
+    color: var(--text-light);
+    font-family: 'Hanuman', serif;
+    padding: 20px 10px;
+}
+
+.cyber-container {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #151c24;
+    border: 2px solid var(--cyber-gold);
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.title-moul {
+    font-family: 'Moul', serif;
+    color: var(--cyber-gold);
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(197, 160, 89, 0.4);
+}
+
+.game-subtitle {
+    text-align: center;
+    color: var(--cyber-blue);
+    font-size: 0.95rem;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.section-title {
+    font-family: 'Odor Mean Chey', serif;
+    color: var(--cyber-gold);
+    border-bottom: 2px solid var(--cyber-gold);
+    padding-bottom: 8px;
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+
+.announcement-card {
+    background: var(--card-bg);
+    border-left: 4px solid var(--cyber-blue);
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.announcement-text {
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.rules-box {
+    background: rgba(0, 229, 255, 0.05);
+    border: 1px dashed var(--cyber-blue);
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* តារាងបញ្ចូលទិន្នន័យ */
+.scoreboard-section {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.helper-text {
+    font-size: 0.85rem;
+    color: #9aa5b1;
+    margin-bottom: 15px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    min-width: 600px;
+}
+
+th, td {
+    border: 1px solid #2d3748;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: #242f3d;
+    color: var(--cyber-gold);
+}
+
+td input {
+    width: 80px;
+    background: #11161b;
+    border: 1px solid #4a5568;
+    color: #fff;
+    padding: 6px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+td input:focus {
+    border-color: var(--cyber-blue);
+    outline: none;
+}
+
+.action-bar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-cyber-calculate {
+    background: var(--cyber-gold);
+    color: #000;
+    border: none;
+    font-family: 'Hanuman', serif;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3);
+    transition: transform 0.2s;
+}
+
+.btn-cyber-calculate:hover {
+    transform: scale(1.02);
+    background-color: #dfb66a;
+}
+
+/* វេទិកាបង្ហាញអ្នកឈ្នះ (Podium Display) */
+.winners-display {
+    margin-top: 35px;
+    background: linear-gradient(180deg, #1f2933 0%, #11161b 100%);
+    border: 2px solid var(--cyber-blue);
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+}
+
+.winners-title {
+    font-family: 'Moul', serif;
+    color: var(--cyber-blue);
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.podium-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.podium-card {
+    background: #242f3d;
+    border: 1px solid #4a5568;
+    border-radius: 6px;
+    padding: 15px;
+    width: 180px;
+    box-sizing: border-box;
+}
+
+.rank-1 {
+    border: 2px solid #ffd700;
+    height: 180px;
+    background: rgba(255, 215, 0, 0.05);
+    order: 2;
+}
+
+.rank-2 {
+    border: 2px solid #c0c0c0;
+    height: 150px;
+    background: rgba(192, 192, 192, 0.05);
+    order: 1;
+}
+
+.rank-3 {
+    border: 2px solid #cd7f32;
+    height: 130px;
+    background: rgba(205, 127, 50, 0.05);
+    order: 3;
+}
+
+.medal {
+    font-family: 'Odor Mean Chey', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rank-1 .medal { color: #ffd700; }
+.rank-2 .medal { color: #c0c0c0; }
+.rank-3 .medal { color: #cd7f32; }
+
+.team-name {
+    font-family: 'Moul', serif;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.stat {
+    font-size: 0.8rem;
+    color: var(--cyber-red);
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .podium-grid { flex-direction: column; align-items: center; }
+    .podium-card { height: auto !important; width: 100%; }
+    .rank-1 { order: 1; }
+    .rank-2 { order: 2; }
+    .rank-3 { order: 3; }
+}
+style.css
