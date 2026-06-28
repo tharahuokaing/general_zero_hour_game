@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ការប្រកួតដណ្តើមប្រេងសាយប័រ - General Zero Hour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Moul&family=Hanuman:wght@400;700&family=Odor+Mean+Chey&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cyber-container">
+        <header class="cyber-header">
+            <h1 class="title-moul">🎮 ពិធីប្រកួតដណ្តើមប្រេងសាយប័រ 🎮</h1>
+            <p class="game-subtitle">សង្រ្គាមបច្ចេកវិទ្យាដ៏ជក់ចិត្ត - General Zero Hour (Cyber Oil War)</p>
+        </header>
+
+        <section class="announcement-card">
+            <h2 class="section-title"><span class="icon">📢</span> សេចក្តីជូនដំណឹង និងការអញ្ជើញ</h2>
+            <p class="announcement-text">
+                សូមគោរពអញ្ជើញ **ឯកឧត្តម លោកជំទាវ លោកអ្នកស្រី និងភ្ញៀវកិត្តិយសទាំងអស់** ដែលបានធ្វើការចុះឈ្មោះរួចរាល់ មេត្តាអញ្ជើញឡើងលើវេទិកាដើម្បីរៀបចំខ្លួនចូលរួមការប្រកួត។
+            </p>
+            <div class="rules-box">
+                <p>⏱️ **រយៈពេលប្រកួត៖** ១ ម៉ោងពេញ (60 Minutes)</p>
+                <p>👥 **ចំនួនអ្នកចូលរួម៖** បែងចែកជា ៨ ក្រុម (8 Teams)</p>
+                <p>🏆 **ការវាយតម្លៃ៖** ស្វែងរក ៣ ក្រុមចុងក្រោយ ដើម្បីទទួលជ័យលាភី លេខ ១, លេខ ២ និងលេខ ៣ ដោយគណនាពីចំនួនការខូចខាតតិចបំផុត (ថវិកា, កងថ្មើរជើង, រថក្រោះ, យន្តហោះ និងអាវុធសរុបដែលបានខ្ទេច)។ **ក្រុមណាខ្ទេចតិចជាងគេ ឈ្នះលេខមួយ!**</p>
+            </div>
+        </section>
+
+        <section class="scoreboard-section">
+            <h2 class="section-title"><span class="icon">📊</span> ប្រព័ន្ធគណនាពិន្ទុ និងចំណាត់ថ្នាក់សាយប័រ</h2>
+            <p class="helper-text">សូមបញ្ចូលចំនួន «វត្ថុដែលបានខ្ទេច/បាត់បង់» របស់ក្រុមនីមួយៗ (ក្រុមណាមានចំនួនសរុបតិចជាងគេ នឹងឡើងទៅលើគេ)</p>
+            
+            <div class="table-responsive">
+                <table id="teamsTable">
+                    <thead>
+                        <tr>
+                            <th>ឈ្មោះក្រុម</th>
+                            <th>ថវិកាខ្ទេច ($)</th>
+                            <th>ថ្មើរជើងខ្ទេច (នាក់)</th>
+                            <th>រថក្រោះខ្ទេច (គ្រឿង)</th>
+                            <th>យន្តហោះខ្ទេច (គ្រឿង)</th>
+                            <th>អាវុធផ្សេងៗខ្ទេច</th>
+                        </tr>
+                    </thead>
+                    <tbody id="teamsBody">
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="action-bar">
+                <button class="btn-cyber-calculate" onclick="calculateWinners()">🧮 គណនាចំណាត់ថ្នាក់ និងប្រកាសជើងឯក</button>
+            </div>
+        </section>
+
+        <section id="winnersSection" class="winners-display" style="display: none;">
+            <h2 class="winners-title">🏆 ជ័យលាភី ៣ ក្រុមចុងក្រោយ 🏆</h2>
+            <div class="podium-grid">
+                <div class="podium-card rank-2">
+                    <div class="medal">🥈 លេខ ២</div>
+                    <div class="team-name" id="rank2Name">-</div>
+                    <div class="stat" id="rank2Stat">ខ្ទេចសរុប៖ 0</div>
+                </div>
+                <div class="podium-card rank-1">
+                    <div class="medal">🥇 លេខ ១</div>
+                    <div class="team-name" id="rank1Name">-</div>
+                    <div class="stat" id="rank1Stat">ខ្ទេចសរុប៖ 0</div>
+                </div>
+                <div class="podium-card rank-3">
+                    <div class="medal">🥉 លេខ ៣</div>
+                    <div class="team-name" id="rank3Name">-</div>
+                    <div class="stat" id="rank3Stat">ខ្ទេចសរុប៖ 0</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+in
