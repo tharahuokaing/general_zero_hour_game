@@ -1,218 +1,294 @@
-/* រចនាបថបែប Cyber War លាយឡំប្រពៃណី */
+/* ==========================================================================
+   Cyber War & Khmer Heritage Fusion Style (style.css)
+   ========================================================================== */
+
 :root {
-    --cyber-gold: #c5a059;
-    --cyber-dark: #11161b;
-    --cyber-blue: #00e5ff;
-    --cyber-red: #ff1744;
-    --card-bg: #1a232c;
-    --text-light: #e0e6ed;
+    --cyber-dark: #0f1319;       /* ពណ៌ផ្ទៃខាងក្រោយងងឹតបែបហ្គេម */
+    --card-bg: #161f28;          /* ពណ៌ប្រអប់ព័ត៌មាន */
+    --cyber-gold: #c5a059;       /* ពណ៌មាសប្រពៃណី និងពានរង្វាន់ */
+    --cyber-blue: #00e5ff;       /* ពណ៌ខៀវភ្លឺបែបបច្ចេកវិទ្យា (Neon) */
+    --cyber-red: #ff1744;        /* ពណ៌ក្រហមបង្ហាញការខូចខាត/ខ្ទេច */
+    --text-light: #e2e8f0;       /* ពណ៌អក្សរទូទៅ */
+    --table-hover: #1e2936;      /* ពណ៌ពេលដកឃ្លាមើលលើតារាង */
 }
 
+/* 1. កំណត់ទម្រង់ទូទៅ (Global Reset & Typography) */
 body {
     margin: 0;
     padding: 0;
     background-color: var(--cyber-dark);
     color: var(--text-light);
     font-family: 'Hanuman', serif;
-    padding: 20px 10px;
+    font-size: 1rem;
+    line-height: 1.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 12px;
+    box-sizing: border-box;
 }
 
+/* 2. ប្រអប់ផ្ទុកទិន្នន័យចម្បង (Main Container) */
 .cyber-container {
-    max-width: 950px;
-    margin: 0 auto;
-    background: #151c24;
+    max-width: 1000px;
+    width: 100%;
+    background: #121820;
     border: 2px solid var(--cyber-gold);
-    box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
-    padding: 25px;
-    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(197, 160, 89, 0.25);
+    padding: 30px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+/* 3. ផ្នែកក្បាលទំព័រ (Header Section) */
+.cyber-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px double rgba(197, 160, 89, 0.3);
+    padding-bottom: 20px;
 }
 
 .title-moul {
     font-family: 'Moul', serif;
     color: var(--cyber-gold);
-    font-size: 1.4rem;
-    text-align: center;
-    margin-bottom: 5px;
-    text-shadow: 0 0 10px rgba(197, 160, 89, 0.4);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin: 0 0 10px 0;
+    text-shadow: 0 0 12px rgba(197, 160, 89, 0.4);
 }
 
 .game-subtitle {
-    text-align: center;
     color: var(--cyber-blue);
-    font-size: 0.95rem;
-    margin-top: 0;
+    font-size: 1rem;
     font-weight: bold;
+    margin: 0;
+    letter-spacing: 0.5px;
 }
 
+/* 4. ចំណងជើងផ្នែកនីមួយៗ (Section Titles) */
 .section-title {
     font-family: 'Odor Mean Chey', serif;
     color: var(--cyber-gold);
     border-bottom: 2px solid var(--cyber-gold);
     padding-bottom: 8px;
-    font-size: 1.2rem;
-    margin-top: 25px;
+    font-size: 1.25rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
 
+.section-title .icon {
+    margin-right: 10px;
+    font-size: 1.4rem;
+}
+
+/* 5. កាតសេចក្តីជូនដំណឹង និងច្បាប់ប្រកួត (Announcement & Rules Card) */
 .announcement-card {
     background: var(--card-bg);
     border-left: 4px solid var(--cyber-blue);
-    padding: 15px 20px;
-    border-radius: 4px;
-    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .announcement-text {
-    line-height: 1.8;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    margin-top: 0;
+    text-align: justify;
+}
+
+.announcement-text strong {
+    color: var(--cyber-gold);
 }
 
 .rules-box {
-    background: rgba(0, 229, 255, 0.05);
-    border: 1px dashed var(--cyber-blue);
-    padding: 12px;
-    border-radius: 4px;
+    background: rgba(0, 229, 255, 0.04);
+    border: 1px dashed rgba(0, 229, 255, 0.3);
+    padding: 15px;
+    border-radius: 6px;
     margin-top: 15px;
-    font-size: 0.9rem;
-    line-height: 1.6;
 }
 
-/* តារាងបញ្ចូលទិន្នន័យ */
+.rules-box p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+/* 6. ផ្នែកតារាងពិន្ទុ (Scoreboard Section & Responsive Table) */
 .scoreboard-section {
     background: var(--card-bg);
-    padding: 20px;
-    border-radius: 6px;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .helper-text {
-    font-size: 0.85rem;
-    color: #9aa5b1;
-    margin-bottom: 15px;
+    font-size: 0.88rem;
+    color: #a0aec0;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .table-responsive {
+    width: 100%;
     overflow-x: auto;
+    border-radius: 6px;
+    border: 1px solid #2d3748;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
-    min-width: 600px;
+    min-width: 750px; /* ការពារកុំឱ្យតារាងរួមតូចពេកលើអេក្រង់ទូរស័ព្ទ */
 }
 
 th, td {
-    border: 1px solid #2d3748;
-    padding: 10px;
+    padding: 12px 10px;
     text-align: center;
-    font-size: 0.9rem;
+    border-bottom: 1px solid #2d3748;
+    border-right: 1px solid #2d3748;
+    font-size: 0.92rem;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
 }
 
 th {
-    background-color: #242f3d;
+    background-color: #1f2a36;
     color: var(--cyber-gold);
+    font-weight: bold;
 }
 
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: var(--table-hover);
+}
+
+/* ប្រអប់បញ្ចូលពិន្ទុ (Input Elements) */
 td input {
-    width: 80px;
-    background: #11161b;
+    width: 85px;
+    background: #0f1319;
     border: 1px solid #4a5568;
     color: #fff;
-    padding: 6px;
+    padding: 8px;
     border-radius: 4px;
     text-align: center;
     font-weight: bold;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
 }
 
 td input:focus {
     border-color: var(--cyber-blue);
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
     outline: none;
 }
 
+/* 7. ប៊ូតុងបញ្ជា (Action Button) */
 .action-bar {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .btn-cyber-calculate {
     background: var(--cyber-gold);
-    color: #000;
+    color: #0f1319;
     border: none;
     font-family: 'Hanuman', serif;
     font-weight: bold;
-    font-size: 1rem;
-    padding: 12px 30px;
-    border-radius: 4px;
+    font-size: 1.05rem;
+    padding: 14px 35px;
+    border-radius: 6px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+    transition: all 0.25s ease;
 }
 
 .btn-cyber-calculate:hover {
-    transform: scale(1.02);
     background-color: #dfb66a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
 }
 
-/* វេទិកាបង្ហាញអ្នកឈ្នះ (Podium Display) */
+.btn-cyber-calculate:active {
+    transform: translateY(0);
+}
+
+/* 8. វេទិកាបង្ហាញលទ្ធផលជើងឯក ៣ ក្រុម (Podium Winners Display) */
 .winners-display {
     margin-top: 35px;
-    background: linear-gradient(180deg, #1f2933 0%, #11161b 100%);
+    background: linear-gradient(180deg, #1d2631 0%, #0f1319 100%);
     border: 2px solid var(--cyber-blue);
-    border-radius: 8px;
-    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+    border-radius: 10px;
+    padding: 30px 20px;
     text-align: center;
 }
 
 .winners-title {
     font-family: 'Moul', serif;
     color: var(--cyber-blue);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-top: 0;
+    margin-bottom: 30px;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
 }
 
 .podium-grid {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    gap: 15px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+    align-items: flex-end; /* តម្រៀបឱ្យស្មើជើងក្រោមឡើងលើ */
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .podium-card {
-    background: #242f3d;
+    background: #1c2735;
     border: 1px solid #4a5568;
-    border-radius: 6px;
-    padding: 15px;
-    width: 180px;
+    border-radius: 8px;
+    padding: 20px 15px;
+    width: 200px;
     box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
 }
 
+/* ការកំណត់កម្ពស់វេទិកាតាមចំណាត់ថ្នាក់ លេខ ១, ២, ៣ */
 .rank-1 {
     border: 2px solid #ffd700;
-    height: 180px;
-    background: rgba(255, 215, 0, 0.05);
-    order: 2;
+    height: 210px;
+    background: rgba(255, 215, 0, 0.04);
+    order: 2; /* ឱ្យនៅកណ្តាល */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
 }
 
 .rank-2 {
     border: 2px solid #c0c0c0;
-    height: 150px;
-    background: rgba(192, 192, 192, 0.05);
-    order: 1;
+    height: 180px;
+    background: rgba(192, 192, 192, 0.04);
+    order: 1; /* ឱ្យនៅខាងឆ្វេង */
 }
 
 .rank-3 {
     border: 2px solid #cd7f32;
-    height: 130px;
-    background: rgba(205, 127, 50, 0.05);
-    order: 3;
+    height: 155px;
+    background: rgba(205, 127, 50, 0.04);
+    order: 3; /* ឱ្យនៅខាងស្តាំ */
 }
 
 .medal {
     font-family: 'Odor Mean Chey', serif;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .rank-1 .medal { color: #ffd700; }
@@ -221,21 +297,47 @@ td input:focus {
 
 .team-name {
     font-family: 'Moul', serif;
-    font-size: 0.9rem;
-    color: #fff;
-    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    white-space: nowrap;
 }
 
 .stat {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--cyber-red);
     font-weight: bold;
+    background: rgba(255, 23, 68, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
 }
 
-@media (max-width: 600px) {
-    .podium-grid { flex-direction: column; align-items: center; }
-    .podium-card { height: auto !important; width: 100%; }
+/* 9. ទម្រង់ឆ្លើយតបអេក្រង់ទូរស័ព្ទដៃ (Responsive Media Queries) */
+@media (max-width: 680px) {
+    .cyber-container {
+        padding: 20px 15px;
+    }
+    
+    .title-moul {
+        font-size: 1.2rem;
+    }
+    
+    .podium-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .podium-card {
+        height: auto !important; /* លុបកម្ពស់ចេញពេលអេក្រង់តូច ដើម្បីរៀបធ្លាក់ចុះក្រោម */
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    /* រៀបលំដាប់លទ្ធផលពី លេខ១ ដល់ លេខ៣ តាមជួរឈរវិញ */
     .rank-1 { order: 1; }
     .rank-2 { order: 2; }
     .rank-3 { order: 3; }
 }
+
